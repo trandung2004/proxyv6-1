@@ -13,9 +13,9 @@ gen64() {
 }
 install_3proxy() {
     echo "installing 3proxy"
-    URL="https://github.com/trandung2004/proxyv6-1/blob/main/3proxy-master.zip?raw=true"
+    URL="https://github.com/3proxy/3proxy/archive/refs/tags/0.9.4.tar.gz"
     wget -qO- $URL | bsdtar -xvf-
-    cd 3proxy-master
+    cd 3proxy-0.9.4
     make -f Makefile.Linux
     mkdir -p /usr/local/etc/3proxy/{bin,logs,stat}
     cp src/3proxy /usr/local/etc/3proxy/bin/
